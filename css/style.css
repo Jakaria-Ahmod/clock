@@ -1,0 +1,102 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.main {
+  width: 402px;
+  height: 402px;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.colock {
+  width: 400px;
+  height: 400px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-image: url('../img/clockimg.gif');
+  background-size: cover;
+  transition: all linear 0.3s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.colock:hover {
+  box-shadow: 0px 0px 100px white;
+}
+
+.colock::after {
+  content: '';
+  background-color: black;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hour,
+.minuts,
+.seceond {
+  position: absolute;
+}
+
+.hr,
+.hour {
+  width: 190px;
+  height: 242px;
+}
+.minuts,
+.min {
+  width: 190px;
+  height: 270px;
+}
+.seceond,
+.se {
+  width: 190px;
+  height: 300px;
+}
+.hr,
+.min,
+.se {
+  display: flex;
+  justify-content: center;
+}
+
+.hr::after {
+  content: '';
+  width: 10px;
+  height: 130px;
+  background-color: red;
+  position: absolute;
+  border-radius: 10px 10px 0px 0px;
+}
+.min::after {
+  content: '';
+  width: 7px;
+  height: 140px;
+  background-color: green;
+  position: absolute;
+  border-radius: 10px 10px 0px 0px;
+}
+.se::after {
+  content: '';
+  width: 4px;
+  height: 160px;
+  background-color: blue;
+  position: absolute;
+  border-radius: 10px 10px 0px 0px;
+}
+p {
+  transform: rotateZ('angle');
+}
